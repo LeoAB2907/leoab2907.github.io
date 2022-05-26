@@ -2,56 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Leonardo Arias</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!----- header ------>
+    <header>
+        <a href="#" class="logo">< Leonardo<span> \></span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h5>Hello, my name is</h5>
+    <!--        <img src="images/personal_logo.png" class="home-image">-->
+            <div class="home-name">
+                <h2>Leonardo</h2>
+                <h1><span>Arias</span></h1>
+            </div>
+            <h4>| Programmer | <span>Engineer</span> | Musician | <span>Reptile Owner</span> |</h4>
 
-    <div>
-        <div>
-            <!--Nav-->
-            <div>
-                <div>< Home /></div>
-                <div>About</div>
-                <div>Projects</div>
-                <div>Resume</div>
-                <div>Contact</div>
-            </div>
-            <!--Home-->
-            <div>
-                <img src="images/personal_logo.png" style="width:700px">
-                <div></div>
-                <h1>| Programmer | Engineer | Musician | Reptile Owner |</h1>
-                <!--Social Media Icons-->
-                <div>
-                    <img src="images/github_icon.png" style="width:50px">
-                    <img src="images/facebook_icon.png" style="width:50px">
-                    <img src="images/linked_in_icon.png" style="width:50px">
-                    <img src="images/twitter_icon.png" style="width:50px">
-                    <img src="images/instagram_icon.png" style="width:50px">
-                </div>
-                <div>About Me</div>
+<!--            <div>-->
+<!--                <img src="images/github_icon.png" style="width:50px">-->
+<!--                <img src="images/facebook_icon.png" style="width:50px">-->
+<!--                <img src="images/linked_in_icon.png" style="width:50px">-->
+<!--                <img src="images/twitter_icon.png" style="width:50px">-->
+<!--                <img src="images/instagram_icon.png" style="width:50px">-->
+<!--            </div>-->
 
-            </div>
-            <!--About-->
-            <div>
-                <h1>About Me</h1>
-                <p>My name is Leonardo Arias, I graduated from George Mason
-                    University in 2022 with a degree in Computer Science. My passions are
-                    playing the guitar and keeping reptiles.</p>
-                <div>Resume</div>
-            </div>
-            <!--Projects-->
-            <div>
-                <h1>Projects</h1>
-
-            </div>
-            <!--Contact-->
-            <div>
-                <h1>Contact Me</h1>
-                <p>I'm currently looking for full time software development opportunities
-                    you can reach me at contact@leonardoarias.xyz</p>
-            </div>
+            <a href="#about" class="btn">About Me</a>
         </div>
-    </div>
+    </section>
+
+    <!--About-->
+    <section class="about" id="about">
+
+        <div class="about-text">
+            <h1>ABOUT ME</h1>
+            <p>My name is <span>Leonardo Arias</span>, I graduated from George Mason
+                University in 2022 with a degree in Computer Science. My passions are
+                playing the guitar and keeping reptiles.</p>
+            <a href="files/resume.pdf" download="Leonardo_Arias_CV" class="btn" id="resume">Download Resume</a>
+        </div>
+
+        <div class="about-img">
+            <img src="images/about.jpg">
+        </div>
+    </section>
+
+    <!--Projects-->
+    <section class="projects" id="projects">
+        <div>
+            <h1>Projects</h1>
+        </div>
+    </section>
+
+    <!--Contact-->
+    <section class="contact" id="contact">
+        <div>
+            <h1>Contact Me</h1>
+            <p>I'm currently looking for full time software development opportunities
+                you can reach me at <spam>contact@leonardoarias.xyz</spam></p>
+        </div>
+    </section>
+
+
+    <!------ Link to js ------>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
