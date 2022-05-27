@@ -11,7 +11,7 @@
 :root{
     --bg-color: #b7b7e2;
     --main-color: #af08d3;
-    --2nd-main-color: #ffffcc;
+    --2nd-main-color: #131313;
     --text-color: #000000;
     --big-font: 5rem;
     --h2-font: 1.9rem;
@@ -133,8 +133,16 @@ section{
     padding: 0 25px;
     line-height: 42px;
     display: inline-block;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: ease all 0.35s;
 }
-
+.btn:hover{
+    background: #ffffff;
+    color: var(--main-color);
+    box-shadow: 4px 4px #313131;
+}
 .about{
     background: var(--about-bkground);
     display: grid;
@@ -162,4 +170,140 @@ section{
     margin: 0 0 30px;
     line-height: 1.8rem;
     word-spacing: 5px;
+}
+.contact{
+    background: var(--about-bkground);
+    align-items: center;
+}
+.contact-text h1{
+    color: var(--text-color);
+    font-size: 30px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.contact-text p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin: 0 0 30px;
+    line-height: 1.8rem;
+    word-spacing: 5px;
+    text-align: center;
+}
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+}
+.contact-form form{
+    position: relative;
+    width: 550px;
+
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: var(--text-color)
+}
+textarea{
+    resize: none;
+    height: 200px;
+}
+form .send-btn{
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--main-color);
+    color: #ffffff;
+    box-shadow: 4px 4px #313131;
+    padding: 0 25px;
+    line-height: 42px;
+    display: inline-block;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: ease all 0.35s;
+    cursor: pointer;
+}
+form .send-btn:hover{
+    background: #ffffff;
+    color: var(--main-color);
+    box-shadow: 4px 4px #313131;
+}
+.copyright{
+    text-align: center;
+    padding: 30px;
+    color: var(--text-color);
+    background: var(--about-bkground);
+    line-height: 1.8rem;
+}
+
+@media (max-width: 1430px){
+    header{
+        padding: 25px 3%
+    }
+    section{
+        padding: 50px 3%;
+    }
+    :root{
+        --big-font: 4rem;
+        --h2-font: 1.2rem;
+    }
+}
+@media (max-width: 1020px){
+    :root{
+        --big-font: 3rem;
+        --h2-font: 1.2rem;
+        --p-font: 0.9rem;
+    }
+}
+@media (max-width: 830px){
+    header{
+        padding: 18px 3%;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
+        text-align: left;
+        transition: 0.2s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 1rem;
+        border-left: 2px solid var(--main-color);
+        margin: 1rem;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+}
+@media (max-width: 795px){
+    .about{
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        text-align: center;
+        height: 100vh;
+    }
+    .about-img img{
+        max-width: 100%;
+        width: 490px;
+    }
 }
