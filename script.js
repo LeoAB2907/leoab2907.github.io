@@ -17,18 +17,4 @@ const sr = ScrollReveal ({
 })
 
 sr.reveal('.home-content' ,{delay: 200, origin:'top'})
-sr.reveal('.about-text, .contact-text, .contact-form' ,{delay: 200, origin:'top'})
-
-function sendEmail(){
-    Email.send({
-        Host : "smtp.yourisp.com",
-        Username : "username",
-        Password : "password",
-        To : 'them@website.com',
-        From : "you@isp.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-        message => alert(message)
-    );
-}
+sr.reveal('.about-text, .contact-text, .contact-form, .projects' ,{delay: 200, origin:'top'})

@@ -15,7 +15,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
 </head>
 <body>
     <!----- header ------>
@@ -34,20 +35,11 @@
     <section class="home" id="home">
         <div class="home-content">
             <h5>Hello, my name is</h5>
-    <!--        <img src="images/personal_logo.png" class="home-image">-->
             <div class="home-name">
                 <h2>Leonardo</h2>
                 <h1><span>Arias</span></h1>
             </div>
             <h4>| Programmer | <span>Engineer</span> | Musician | <span>Reptile Owner</span> |</h4>
-
-<!--            <div>-->
-<!--                <img src="images/github_icon.png" style="width:50px">-->
-<!--                <img src="images/facebook_icon.png" style="width:50px">-->
-<!--                <img src="images/linked_in_icon.png" style="width:50px">-->
-<!--                <img src="images/twitter_icon.png" style="width:50px">-->
-<!--                <img src="images/instagram_icon.png" style="width:50px">-->
-<!--            </div>-->
 
             <a href="#about" class="btn">About Me</a>
         </div>
@@ -57,7 +49,7 @@
     <section class="about" id="about">
 
         <div class="about-text">
-            <h1>ABOUT ME</h1>
+            <h1>About Me</h1>
             <p>My name is <span>Leonardo Arias</span>, I graduated from George Mason
                 University in 2022 with a degree in Computer Science. My passions are
                 playing the guitar and keeping reptiles.</p>
@@ -78,8 +70,9 @@
 
     <!--Projects-->
     <section class="projects" id="projects">
-        <div>
-            <h1>Projects</h1>
+        <h1>Recent Projects</h1>
+        <div class="projects-main" id="projects-main">
+                <!-- Dynamic Portfolio using github api -->
         </div>
     </section>
 
@@ -88,19 +81,20 @@
         <div class="contact-text">
             <h1>Contact Me</h1>
             <p>I'm currently looking for full time software engineering opportunities
-                you can reach me at <a href="mailto:mail@leonardoarias.xyz" style="text-decoration: none;"><span>mail@leonardoarias.xyz</span></a> or send me a message bellow.</p>
+                you can reach me at <a href="mailto:mail@leonardoarias.xyz" style="text-decoration: none;">
+                    <span>mail@leonardoarias.xyz</span></a> or send me a message bellow.</p>
         </div>
         <div class="contact-form">
             <form action="https://mailthis.to/mail@leonardoarias.xyz"
-                  method="POST">
+                  method="POST" target="hidden_iframe" onsubmit="submitted=true;" id="contact-form">
+
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="_replyto" placeholder="Email Address" required>
                 <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
                 <input type="hidden" name="_subject" value="Contact form submitted">
-                <input type="hidden" name="_after" value="https://leonardoarias.xyz/">
                 <input type="hidden" name="_honeypot" value="">
-                <input type="hidden" name="_confirmation" value="Message Successfully sent! I usually reply within 24 hours. Thanks!">
                 <input type="submit" value="Send" class="send-btn">
+
             </form>
         </div>
     </section>
@@ -112,9 +106,26 @@
         </p>
     </div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <iframe name="hidden_iframe" id="hidden_iframe"
+            style="display:none;" onload="if(submitted){}">
+    </iframe>
     <!------ Link to js ------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <script type="text/javascript">
+        $('#contact-form').on('submit', function(e){
+            $('#contact-form *').fadeOut(500);
+            $('#contact-form').prepend('Your Message has been sent! I usually' +
+                ' reply within 24 hours. Thanks!');
+        });
+    </script>
+
 </body>
 </html>

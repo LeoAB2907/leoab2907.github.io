@@ -180,6 +180,78 @@ section{
 .about-social a:hover{
     color: var(--main-color);
 }
+.projects{
+    align-items: center;
+    height: auto;
+}
+.projects h1{
+    position: relative;
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin: 0 0 30px;
+}
+.projects-main{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 5rem;
+    margin-top: 2rem;
+}
+.projects-main article{
+    position: relative;
+    background: var(--about-bkground);
+    width: 100%;
+    min-height: 300px;
+    padding: 20px 5%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.projects-main article h3{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+.projects-main article p{
+    color: var(--2nd-main-color);
+    font-size: 0.9rem;
+    text-space: 1px;
+    word-spacing: 2.5px;
+    margin: 10px 0 20px;
+}
+.projects-main article hr{
+    border: 0;
+    border-top: 1px solid #b0b0b0;
+    margin-bottom: 20px;
+
+}
+.projects-main article .projects-time{
+    color: #3b3b3b;
+    text-align: right;
+    font-size: 0.8rem;
+}
+.projects-main article .projects-btn{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--2nd-main-color);
+    padding: 0 15px;
+    line-height: 42px;
+    display: inline-block;
+    border: 1px solid;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: ease all 0.35s;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.projects-main article .projects-btn:hover{
+    background: var(--main-color);
+    color: #ffffff;
+}
+
 .contact{
     background: var(--about-bkground);
     align-items: center;
@@ -314,5 +386,14 @@ form .send-btn:hover{
     .about-img img{
         max-width: 100%;
         width: 490px;
+    }
+    .projects-main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin-top: 2rem;
+    }
+    .projects{
+        min-height: 100vh;
     }
 }
