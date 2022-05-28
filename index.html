@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Leonardo Arias</title>
+
+    <link rel="icon" href="images/personal_logo.png" type="image/x-icon">
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="stylesheet"
@@ -58,9 +61,16 @@
             <p>My name is <span>Leonardo Arias</span>, I graduated from George Mason
                 University in 2022 with a degree in Computer Science. My passions are
                 playing the guitar and keeping reptiles.</p>
+            <h3><span>Follow Me</span></h3>
+            <div class="about-social">
+                <a href="https://github.com/LeoAB2907" class="bx bxl-github"></a>
+                <a href="https://instagram.com/leonardo.ariasb" class="bx bxl-instagram"></a>
+                <a href="https://www.linkedin.com/in/leonardo-arias-849024240/" class="bx bxl-linkedin-square"></a>
+                <a href="https://twitter.com/LeoAB2907" class="bx bxl-twitter"></a>
+            </div>
+
             <a href="files/resume.pdf" download="Leonardo_Arias_CV" class="btn" id="resume">Download Resume</a>
         </div>
-
         <div class="about-img">
             <img src="images/about.jpg">
         </div>
@@ -78,14 +88,19 @@
         <div class="contact-text">
             <h1>Contact Me</h1>
             <p>I'm currently looking for full time software engineering opportunities
-                you can reach me at <span>contact@leonardoarias.xyz</span> or send me a message bellow.</p>
+                you can reach me at <a href="mailto:mail@leonardoarias.xyz" style="text-decoration: none;"><span>mail@leonardoarias.xyz</span></a> or send me a message bellow.</p>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Your Name" required>
-                <input type="email" name="" id="" placeholder="Email Address" required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-                <input type="submit" name="" value="Send" class="send-btn">
+            <form action="https://mailthis.to/mail@leonardoarias.xyz"
+                  method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Email Address" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                <input type="hidden" name="_subject" value="Contact form submitted">
+                <input type="hidden" name="_after" value="https://leonardoarias.xyz/">
+                <input type="hidden" name="_honeypot" value="">
+                <input type="hidden" name="_confirmation" value="Message Successfully sent! I usually reply within 24 hours. Thanks!">
+                <input type="submit" value="Send" class="send-btn">
             </form>
         </div>
     </section>
@@ -100,5 +115,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!------ Link to js ------>
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

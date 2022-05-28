@@ -171,6 +171,15 @@ section{
     line-height: 1.8rem;
     word-spacing: 5px;
 }
+.about-social a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 40px;
+    margin: 10px 0 30px;
+}
+.about-social a:hover{
+    color: var(--main-color);
+}
 .contact{
     background: var(--about-bkground);
     align-items: center;
